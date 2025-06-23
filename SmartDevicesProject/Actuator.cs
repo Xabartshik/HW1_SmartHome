@@ -38,7 +38,7 @@ namespace SmartDevicesProject
         }
         public override void GetStatus()
         {
-            Console.WriteLine($"Actuator {Name}: Last = {IsActive}");
+            Console.WriteLine($"Actuator {Name}: State = {IsActive}");
         }
     }
 }
