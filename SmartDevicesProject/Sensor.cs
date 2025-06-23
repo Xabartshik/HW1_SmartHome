@@ -14,11 +14,15 @@ namespace SmartDevicesProject
         public void Connect(SmartHub hub)
         {
             UpdateHubReference(hub);
+            currentHub.AddDevice();
             Console.WriteLine($"Sensor: {Name} is connected to {currentHub}");
         }
 
         public void Disconnect()
         {
+            if (currentHub is null)
+                throw new Exception("Device isn't connected to any hub.");
+            currentHub.RemoveDevice();
             UpdateHubReference(null);
             Console.WriteLine($"Sensor: {Name} is disconnected from hub");
         }
