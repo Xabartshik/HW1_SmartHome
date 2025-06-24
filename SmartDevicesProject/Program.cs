@@ -28,10 +28,10 @@
             actuator.Toggle();
             Console.WriteLine();
 
-            sensor1.GetStatus();
-            sensor2.GetStatus();
-            actuator.GetStatus();
-            sHub.GetStatus();
+            Console.WriteLine(sensor1.GetStatus());
+            Console.WriteLine(sensor2.GetStatus());
+            Console.WriteLine(actuator.GetStatus());
+            Console.WriteLine(sHub.GetStatus());
             Console.WriteLine();
 
             sensor1.Disconnect();
@@ -39,7 +39,7 @@
             actuator.Disconnect();
             Console.WriteLine();
 
-            sHub.GetStatus();
+            Console.WriteLine(sHub.GetStatus());
             Console.WriteLine();
         }
     }

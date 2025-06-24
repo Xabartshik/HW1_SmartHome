@@ -3,9 +3,9 @@
     public class SmartHub : Device
     {
         public int DevicesCount { get; set; }
-        public override void GetStatus()
+        public override string GetStatus()
         {
-            Console.WriteLine($"Hub {Name}: {DevicesCount} device(s) connected");
+            return $"Hub {Name}: {DevicesCount} device(s) connected";
         }
         public void AddDevice()
         {

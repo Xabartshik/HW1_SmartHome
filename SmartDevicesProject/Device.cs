@@ -22,7 +22,7 @@ namespace SmartDevicesProject
         }
         protected SmartHub? currentHub;
 
-        virtual public void GetStatus() {  Console.WriteLine($"Device: {Name}"); }
+        virtual public string GetStatus() {  return $"Device: {Name}"; }
         virtual public void UpdateHubReference(SmartHub? hub) { currentHub = hub; }
     }
 }

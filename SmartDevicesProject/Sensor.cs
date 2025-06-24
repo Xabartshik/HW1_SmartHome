@@ -32,9 +32,9 @@ namespace SmartDevicesProject
             LastReading = value;
         }
 
-        public override void GetStatus()
+        public override string GetStatus()
         {
-            Console.WriteLine($"Sensor {Name}: Last = {_lastReading}");
+            return $"Sensor {Name}: Last = {_lastReading}";
         }
     }
 }
