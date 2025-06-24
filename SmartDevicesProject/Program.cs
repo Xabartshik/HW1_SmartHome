@@ -11,7 +11,7 @@
             };
             var actuator = new Actuator
             {
-                Name = "Свитч",
+                Name = null,
                 Id = 1
             };
             var sensor1 = new Sensor { Name = "Сенсор-1", Id = 2 };

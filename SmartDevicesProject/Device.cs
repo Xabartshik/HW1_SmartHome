@@ -11,11 +11,15 @@ namespace SmartDevicesProject
         public int Id { get; set; }
         private string _name;
         public string Name { get { return _name; } 
-            set { _name = value.Trim();
-                if (String.IsNullOrEmpty(value)) {
+            set { 
+                
+                _name = value ?? $"Device-{Id}";
+                _name = _name.Trim();
+                if (String.IsNullOrEmpty(_name)) {
                     throw new ArgumentException("Строка не может быть пустой");
                 }
-            } }
+            }
+        }
         protected SmartHub? currentHub;
 
         virtual public void GetStatus() {  Console.WriteLine($"Device: {Name}"); }
